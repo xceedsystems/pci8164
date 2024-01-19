@@ -1,0 +1,115 @@
+SSI_RLL_DOCUMENT
+VERSION: 8
+USER_VERSION: 17
+RUNTIME_CHECKING: DEFAULT
+GUID: -209910859, 1198982190, -1412201065, -1766544173
+OLP_GUID: 928565861, 1211631788, 461080994, -436965024
+NEXTKEY: 76
+END_DOCNOTE
+RLL_NAME:
+RLL_COMMENT
+convert unsign to sign integer
+Copyright Xceed Systems@
+RLL_RUNG
+RUNG_TITLE: Rung Title
+RUNG_COMMENT
+converting unsign position value@
+RUNG_KEY: 2
+DOC_SAVE: 16
+HORZWIRE: 0,0
+HORZWIRE: 1,0
+HORZWIRE: 2,0
+HORZWIRE: 3,0
+HORZWIRE: 4,0
+HORZWIRE: 5,0
+ITEM_TYPE: 10
+KEY: 3
+LABEL: Card 1
+INTERNAL_DATA
+VERSION: 1
+CONTENTS:
+if (ArrayAxisPperMMSetup[1] < 1 ) then ArrayAxisPperMMSetup[1] = 1; end_if;
+if (ArrayAxisPperMMSetup[2] < 1 ) then ArrayAxisPperMMSetup[2] = 1; end_if;
+if (ArrayAxisPperMMSetup[3] < 1 ) then ArrayAxisPperMMSetup[3] = 1; end_if;
+if (ArrayAxisPperMMSetup[4] < 1 ) then ArrayAxisPperMMSetup[4] = 1; end_if;
+
+
+Axis1_Pos = sint32(MotionPos_1)  / ArrayAxisPperMMSetup[1];
+Axis2_Pos = sint32(MotionPos_2)  / ArrayAxisPperMMSetup[2];
+Axis3_Pos = sint32(MotionPos_3)  / ArrayAxisPperMMSetup[3];
+Axis4_Pos = sint32(MotionPos_4)  / ArrayAxisPperMMSetup[4];
+
+
+RUNTIME_CHECKING: DEFAULT
+POSITION: 6,0
+END_OBJECT
+END_RUNG
+RLL_RUNG
+RUNG_TITLE: Rung Title
+RUNG_COMMENT
+@
+RUNG_KEY: 5
+DOC_SAVE: 15
+HORZWIRE: 0,0
+ITEM_TYPE: 10
+KEY: 4
+LABEL: Card 2
+INTERNAL_DATA
+VERSION: 1
+CONTENTS:
+if (ArrayAxisPperMMSetup[5] < 1 ) then ArrayAxisPperMMSetup[5] = 1; end_if;
+if (ArrayAxisPperMMSetup[6] < 1 ) then ArrayAxisPperMMSetup[6] = 1; end_if;
+if (ArrayAxisPperMMSetup[7] < 1 ) then ArrayAxisPperMMSetup[7] = 1; end_if;
+if (ArrayAxisPperMMSetup[8] < 1 ) then ArrayAxisPperMMSetup[8] = 1; end_if;
+
+
+Axis5_Pos = sint32(MotionPos_5)  / ArrayAxisPperMMSetup[5];
+Axis6_Pos = sint32(MotionPos_6)  / ArrayAxisPperMMSetup[6];
+Axis7_Pos = sint32(MotionPos_7)  / ArrayAxisPperMMSetup[7];
+Axis8_Pos = sint32(MotionPos_8)  / ArrayAxisPperMMSetup[8];
+
+
+
+RUNTIME_CHECKING: DEFAULT
+POSITION: 1,0
+END_OBJECT
+HORZWIRE: 3,0
+HORZWIRE: 4,0
+HORZWIRE: 5,0
+HORZWIRE: 6,0
+HORZWIRE: 7,0
+END_RUNG
+RLL_RUNG
+RUNG_TITLE: Rung Title
+RUNG_COMMENT
+@
+RUNG_KEY: 13
+DOC_SAVE: 14
+HORZWIRE: 0,0
+HORZWIRE: 1,0
+HORZWIRE: 2,0
+HORZWIRE: 3,0
+HORZWIRE: 4,0
+HORZWIRE: 5,0
+ITEM_TYPE: 10
+KEY: 14
+LABEL:
+INTERNAL_DATA
+VERSION: 1
+CONTENTS:
+AxisRawPos[1] =  sint32(MotionPos_1)  ;
+AxisRawPos[2] =  sint32(MotionPos_2)  ;
+AxisRawPos[3] =  sint32(MotionPos_3)  ;
+AxisRawPos[4] =  sint32(MotionPos_4)  ;
+
+AxisRawPos[5] =  sint32(MotionPos_5)  ;
+AxisRawPos[6] =  sint32(MotionPos_6)  ;
+AxisRawPos[7] =  sint32(MotionPos_7)  ;
+AxisRawPos[8] =  sint32(MotionPos_8)  ;
+
+
+RUNTIME_CHECKING: DEFAULT
+POSITION: 6,0
+END_OBJECT
+END_RUNG
+END_DOC
